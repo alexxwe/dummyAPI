@@ -2,7 +2,9 @@
     import '../app.css'
 </script>
 
-<slot />
+<main class="bg-zinc-600">
+    <slot />
+</main>
 
 <style>
 </style>
