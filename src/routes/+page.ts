@@ -3,7 +3,7 @@ import type { ProductDto } from '$lib/types/productDto.js'
 /** @type {import('./$types').PageLoad} */
 export async function load({ fetch }): Promise<{ products: Array<ProductDto> }> {
     try {
-        const response = await fetch('https://dummyjson.com/products')
+        const response = await fetch('https://dummyjson.com/products?limit=100')
         // const data = (await response.json()).products
         // const products: Array<ProductDto> = []
         const products: Array<ProductDto> = (await response.json()).products
