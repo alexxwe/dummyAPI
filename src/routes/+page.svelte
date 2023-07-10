@@ -1,7 +1,7 @@
 <script lang="ts">
     import '../app.css'
     import type { ProductDto } from '$lib/types/productDto'
-    import { bgColor, shadowColor } from '$lib/utils/bgColor'
+    import Product from '$lib/components/Product.svelte'
 
 
     /** @type {import('./$types').PageData} */
@@ -18,16 +18,7 @@
 <div class="mx-auto max-w-screen-2xl">
     <ul class="grid grid-cols-3 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {#each data.products as product}
-        <li class=" text-xl rounded-lg bg-zinc-400 p-4 text-center {bgColor[product.category]} {shadowColor[product.category]}">
-            <p class="text-2xl"> #{product.id} {product.title}</p>
-            <p>{product.price}€</p>
-            <p>SALE: {product.discountPercentage}%</p>
-            <!-- <p>Rating: {product.rating}</p> -->
-            <!-- <p>{product.stock }</p> -->
-            <p>{product.brand}</p>
-            <img src={product.thumbnail} alt={product.title} class="h-40 my-4 mx-auto">
-            <p class="text-black"> {product.description}</p>
-        </li>
+        <Product {product} />
         {/each}
     </ul>
 </div>
