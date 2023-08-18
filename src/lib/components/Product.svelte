@@ -30,7 +30,6 @@
             <p>{product.brand}</p>
             <img src={product.thumbnail} alt={product.title} class="my-4 mx-auto h-40" />
             <p class="text-2xl text-black">{product.description}</p>
-            product.svelte
         </li>
     </a>
 </div>
