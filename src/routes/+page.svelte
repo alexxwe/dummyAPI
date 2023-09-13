@@ -3,6 +3,7 @@
     import type { ProductDto } from '$lib/types/productDto'
     import Product from '$lib/components/Product.svelte'
     import type { userDto } from '$lib/types/userDto'
+    import { userColor } from '$lib/utils/bgColor'
 
     /** @type {import('./$types').PageData} */
     export let data: {
@@ -34,6 +35,8 @@
     function handleUser(e: any) {
         const selectedIndex = e.target.selectedIndex
         selectedUser = data.users[selectedIndex - 1]
+        document.body.classList.remove(...Object.values(userColor))
+        document.body.classList.add(userColor[selectedUser.id])
     }
 
     let search = ''

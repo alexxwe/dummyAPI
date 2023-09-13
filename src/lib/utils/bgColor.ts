@@ -44,3 +44,77 @@ export const shadowColor: Record<string, string> = {
     'lighting': 'hover:shadow-yellow-600 shadow-lg border-2 border-yellow-600',
 }
 
+export const userColor: Record<string, string> = {
+    '0': 'bg-slate-500',
+    '1': 'bg-rose-500',
+    '2': 'bg-emerald-400',
+    '3': 'bg-amber-600',
+    '4': 'bg-sky-400',
+    '5': 'bg-lime-500',
+    '6': 'bg-teal-300',
+    '7': 'bg-cyan-700',
+    '8': 'bg-lime-600',
+    '9': 'bg-orange-400',
+    '10': 'bg-zinc-600',
+    '11': 'bg-rose-500',
+    '12': 'bg-emerald-400',
+    '13': 'bg-amber-600',
+    '14': 'bg-sky-400',
+    '15': 'bg-lime-500',
+    '16': 'bg-teal-300',
+    '17': 'bg-cyan-700',
+    '18': 'bg-lime-600',
+    '19': 'bg-orange-400',
+    '20': 'bg-zinc-600',
+    '21': 'bg-rose-500',
+    '22': 'bg-emerald-400',
+    '23': 'bg-amber-600',
+    '24': 'bg-sky-400',
+    '25': 'bg-lime-500',
+    '26': 'bg-teal-300',
+    '27': 'bg-cyan-700',
+    '28': 'bg-lime-600',
+    '29': 'bg-orange-400',
+    '30': 'bg-zinc-600',
+    '31': 'bg-rose-500',
+    '32': 'bg-emerald-400',
+    '33': 'bg-amber-600',
+    '34': 'bg-sky-400',
+    '35': 'bg-lime-500',
+    '36': 'bg-teal-300',
+    '37': 'bg-cyan-700',
+    '38': 'bg-lime-600',
+    '39': 'bg-orange-400',
+    '40': 'bg-zinc-600',
+    '41': 'bg-rose-500',
+    '42': 'bg-emerald-400',
+    '43': 'bg-amber-600',
+    '44': 'bg-sky-400',
+    '45': 'bg-lime-500',
+    '46': 'bg-teal-300',
+    '47': 'bg-cyan-700',
+    '48': 'bg-lime-600',
+    '49': 'bg-orange-400',
+    '50': 'bg-zinc-600',
+}
+
+// 'smartphones':
+// 'laptops':
+// 'fragrances':
+// 'skincare':
+// 'groceries':
+// home-decoration':
+// 'furniture':
+// 'tops':
+// womens-dresses':
+// womens-shoes':
+// mens-shirts':
+// mens-shoes':
+// mens-watches':
+// womens-watches':
+// womens-bags':
+// womens-jewellery':
+// 'sunglasses':
+// 'automotive':
+// 'motorcycle':
+// 'lighting':
