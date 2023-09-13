@@ -18,6 +18,7 @@
     }
 </script>
 
+<div class="mx-auto flex justify-center text-3xl">Work In Progress...</div>
 <main class="bg-gray-300 py-12">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="rounded-lg {bgColor[data.product.category]} {shadowColor[data.product.category]}} p-8">
@@ -43,3 +44,13 @@
         </div>
     </div>
 </main>
+<div class="container mx-auto">
+    <li class="rounded bg-white p-4 shadow">
+        <img src={data.product.thumbnail} alt={data.product.title} class="mb-2 w-full" />
+        <h2 class="mb-1 text-lg font-bold">{data.product.title}</h2>
+        <p class="text-gray-600">{data.product.price}€</p>
+        <p class="mt-2 text-gray-800">{data.product.description}</p>
+        <p class="mt-2 text-gray-600">Category: {data.product.category}</p>
+        card.svelte
+    </li>
+</div>
