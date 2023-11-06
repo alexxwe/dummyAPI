@@ -44,7 +44,9 @@
         </div>
     </div>
 </main>
-<div class="container mx-auto">
+<div class="mx-auto flex justify-center text-3xl">Work In Progress...</div>
+
+<!-- <div class="container mx-auto">
     <li class="rounded bg-white p-4 shadow">
         <img src={data.product.thumbnail} alt={data.product.title} class="mb-2 w-full" />
         <h2 class="mb-1 text-lg font-bold">{data.product.title}</h2>
@@ -53,4 +55,4 @@
         <p class="mt-2 text-gray-600">Category: {data.product.category}</p>
         card.svelte
     </li>
-</div>
+</div> -->
