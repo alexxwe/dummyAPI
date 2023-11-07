@@ -16,6 +16,17 @@
         const stars = '🌕'.repeat(index) + extra
         return stars
     }
+
+    let dif = data.product.id%10 ===0 ? 5 : data.product.id%5
+    let index = data.product.id - dif
+    const next = () => {
+        const maxIndex = data.products.length -5
+        index = index === maxIndex ? 0 : index + 5
+    }
+
+    const back = () => {
+        index = index === 0 ? 95 : index - 5
+    }
 </script>
 
 <div class="mx-auto flex justify-center text-3xl">Work In Progress...</div>
@@ -56,3 +67,26 @@
         card.svelte
     </li>
 </div> -->
+<div class="mt-8 rounded bg-gray-300">
+    <h2 class="mb-4 ml-12 text-4xl font-bold text-black">Related Products</h2>
+    <div class="m-4 mx-auto flex rounded bg-gray-300">
+        <ul class="mx-4 my-4 grid grid-cols-5 gap-4">
+            {#each data.products.slice(index, index + 5) as product}
+                <a href="/product/{product.id}">
+                    <li class="rounded-lg p-4 pb-6 text-center {bgColor[product.category]} {shadowColor[product.category]}">
+                        <p class="my-2 truncate text-xl"># {product.id} {product.title}<br /></p>
+                        <p class="my-2 font-bold text-black">{product.category.toUpperCase()}<br /></p>
+                        <img src={product.thumbnail} alt={product.title} class="rounded-xl my-4 mx-auto h-40" />
+                        <p class="rounded-lg text-3xl text-black">{product.price}€</p>
+                    </li>
+                </a>
+            {/each}
+        </ul>
+    </div>
+    <div class="mb-4 flex justify-center gap-2">
+        <div class="mb-2">
+            <button class="rounded bg-blue-500 px-8 py-2 text-white" on:click={back}> Back </button>
+            <button class="rounded bg-blue-500 px-8 py-2 text-white" on:click={next}> Next </button>
+        </div>
+    </div>
+</div>
