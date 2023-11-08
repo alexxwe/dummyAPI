@@ -15,21 +15,21 @@
 
 <div class="flex">
     <a href="/product/{product.id}" class="flex">
-        <li class=" rounded-lg bg-zinc-400 p-4 text-center text-xl {bgColor[product.category]} {shadowColor[product.category]}">
+        <li class=" rounded-lg p-4 text-center text-xl {bgColor[product.category]} {shadowColor[product.category]}">
             <p class="text-3xl">#{product.id} {product.title.charAt(0).toUpperCase() + product.title.slice(1)}</p>
             <p class="text-4xl">{product.price}€</p>
 
             <div class="my-4 flex justify-between text-4xl">
-                <p>SALE: {product.discountPercentage}%</p>
+                <p class="bg-red-600 rounded-lg p-0.5 mx-4 font-semibold border-2 border-black">SALE: {product.discountPercentage}%</p>
                 <p>STOCK: {product.stock}</p>
             </div>
-            <div class="border border-white">
+            <div class="border-dotted border-2 border-white rounded-full">
                 <span>{rating(product.rating)}</span>
                 <p>Rating: {product.rating}</p>
             </div>
             <p>{product.brand}</p>
             <img src={product.thumbnail} alt={product.title} class="my-4 mx-auto h-40" />
-            <p class="text-2xl text-black">{product.description}</p>
+            <!-- <p class="text-2xl text-black">{product.description}</p> -->
         </li>
     </a>
 </div>
