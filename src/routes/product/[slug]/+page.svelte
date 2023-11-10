@@ -33,8 +33,8 @@
 <main class="bg-gray-300 py-12">
     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="rounded-lg {bgColor[data.product.category]} {shadowColor[data.product.category]}} p-8">
-            <div class="flex">
-                <div class="flex flex-shrink-0 items-center">
+            <div class="md:flex items-center">
+                <div class="md:flex md:flex-shrink-0 ml-16 md:ml-0">
                     <img class="my-2 w-80 rounded-3xl object-cover hover:scale-110" src={data.product.thumbnail} alt={data.product.title} />
                 </div>
                 <div class="my-6 ml-16">
@@ -70,7 +70,7 @@
 <div class="mt-8 rounded bg-gray-300">
     <h2 class="mb-4 ml-12 text-4xl font-bold text-black">Related Products</h2>
     <div class="m-4 mx-auto flex rounded bg-gray-300">
-        <ul class="mx-4 my-4 grid grid-cols-5 gap-4">
+        <ul class="mx-4 my-4 grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
             {#each data.products.slice(index, index + 5) as product}
                 <a href="/product/{product.id}">
                     <li class="rounded-lg p-4 pb-6 text-center {bgColor[product.category]} {shadowColor[product.category]}">
