@@ -52,7 +52,7 @@
     // console.log(uniqueProps)
 </script>
 
-<header class="space-b flex justify-between p-6">
+<header class="space-b md:flex justify-between p-6">
     <!-- max-w-7xl = 80rem (1280px)  -::::-  max-w-screen-2xl = (1536px)-->
     <div>
         <input
@@ -96,6 +96,7 @@
     <h1 class="flex justify-center text-4xl">DummyAPI</h1>
 
     <div class="flex items-end">
+        <label for="user"> User Select</label>
         <img src={selectedUser.image} class="h-20" alt={selectedUser.firstName} />
         <p class="mr-6">{selectedUser.firstName} {selectedUser.id}</p>
         <select class="rounded border border-gray-700 bg-zinc-500 px-4 py-2 leading-tight shadow focus:outline" on:change={handleUser}>
@@ -112,9 +113,11 @@
         <p class="p-4 text-center text-4xl font-bold">ERROR: Categoria no disponible</p>
     {:else}
         <ul class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {#each data.products as product}
-                <Product {product} />
-            {/each}
+                {#each data.products as product}
+                <li>
+                    <Product {product} />
+                </li>
+                {/each}
         </ul>
     {/if}
 </div>
