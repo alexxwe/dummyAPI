@@ -35,6 +35,7 @@
     function handleUser(e: any) {
         const selectedIndex = e.target.selectedIndex
         selectedUser = data.users[selectedIndex - 1]
+        console.log(data.users)
         document.body.classList.remove(...Object.values(userColor))
         document.body.classList.add(userColor[selectedUser.id])
     }
@@ -96,11 +97,11 @@
     <h1 class="flex justify-center text-4xl">DummyAPI</h1>
 
     <div class="flex items-end">
-        <label for="user"> User Select</label>
-        <img src={selectedUser.image} class="h-20" alt={selectedUser.firstName} />
-        <p class="mr-6">{selectedUser.firstName} {selectedUser.id}</p>
+        <label for="user"> </label>
+        <img src={selectedUser.image} class="h-20 w-20" alt={selectedUser.firstName} />
+        <p class="mx-2 w-24">{selectedUser.firstName} {selectedUser.id}</p>
         <select class="rounded border border-gray-700 bg-zinc-500 px-4 py-2 leading-tight shadow focus:outline" on:change={handleUser}>
-            <option value="" selected disabled> Select a user:</option>
+            <option value="" selected disabled> Username:</option>
             {#each data.users as user}
                 <option value={user.id}>{user.username}</option>
             {/each}
