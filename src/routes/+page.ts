@@ -26,7 +26,7 @@ export async function load({ fetch }): Promise<{ products: Array<ProductDto>, us
         //     })
         // }
 
-        const userResponse = await fetch('https://dummyjson.com/users')
+        const userResponse = await fetch('https://dummyjson.com/users?limit=100')
         const users: Array<userDto> = (await userResponse.json()).users
 
         return {
