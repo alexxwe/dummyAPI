@@ -98,7 +98,9 @@
 
     <div class="flex items-end">
         <label for="user"> </label>
-        <img src={selectedUser.image} class="h-20 w-20" alt={selectedUser.firstName} />
+        <a href="/user/{selectedUser.id}" class="mx-auto">
+            <img src={selectedUser.image} class="h-20 w-20" alt={selectedUser.firstName} />
+        </a>
         <p class="mx-2 w-24">{selectedUser.firstName} {selectedUser.id}</p>
         <select class="rounded border border-gray-700 bg-zinc-500 px-4 py-2 leading-tight shadow focus:outline" on:change={handleUser}>
             <option value="" selected disabled> Username:</option>
